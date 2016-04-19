@@ -18,24 +18,21 @@ class BBGameBackgroundView: BBBaseView {
     }
     */
     
-    init(name: String, age: String) {
-        super.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
-        _prepareUI()
-    }
-    
-    convenience init(isTop: Bool) {
-    
-        self.init(name:"123",age:"2")
+    init(size: CGSize) {
+        super.init(frame: CGRect(x: 0, y: 0, width: size.width * Size_Boy, height: size.height * Size_Boy))
+        center = CGPoint(x: Width_Screen / 2.0, y: Height_Screen / 2.0)
+        backgroundColor = UIColor.grayColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    func _prepareUI() {
-        let a : CGFloat = Width_Screen
-        print(a)
+    override func drawRect(rect: CGRect) {
+        let path: UIBezierPath = UIBezierPath(roundedRect: CGRect(x: 100, y: 100, width: 500, height: 200),  cornerRadius: 10)
+        UIColor.redColor().setStroke()
+        path.lineWidth = 2
+        path.stroke()
     }
     
     

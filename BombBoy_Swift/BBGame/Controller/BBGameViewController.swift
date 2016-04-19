@@ -27,8 +27,8 @@ class BBGameViewController: BBBaseViewController {
     func _prepareBackgroundView() {
         view.backgroundColor = UIColor.whiteColor()
 
-        let gameBackgroundView: BBGameBackgroundView = BBGameBackgroundView(isTop: true);
-        view.addSubview(gameBackgroundView);
+        let gameBackgroundView: BBGameBackgroundView = BBGameBackgroundView(size: CGSize(width: 10, height: 10))
+        view.addSubview(gameBackgroundView)
     }
 
 }
