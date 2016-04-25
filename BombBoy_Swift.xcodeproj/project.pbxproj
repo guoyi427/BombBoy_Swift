@@ -16,6 +16,8 @@
 		284840331CC4F28B008FE164 /* BBGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840321CC4F28B008FE164 /* BBGameViewController.swift */; };
 		284840351CC4F611008FE164 /* BBBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840341CC4F611008FE164 /* BBBaseView.swift */; };
 		284840371CC4F634008FE164 /* BBGameBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840361CC4F634008FE164 /* BBGameBackgroundView.swift */; };
+		286814FE1CCE1840005C213D /* BBBoyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286814FD1CCE1840005C213D /* BBBoyView.swift */; };
+		286815001CCE186C005C213D /* BBGamePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286814FF1CCE186C005C213D /* BBGamePadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		284840321CC4F28B008FE164 /* BBGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGameViewController.swift; sourceTree = "<group>"; };
 		284840341CC4F611008FE164 /* BBBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBaseView.swift; sourceTree = "<group>"; };
 		284840361CC4F634008FE164 /* BBGameBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGameBackgroundView.swift; sourceTree = "<group>"; };
+		286814FD1CCE1840005C213D /* BBBoyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBoyView.swift; sourceTree = "<group>"; };
+		286814FF1CCE186C005C213D /* BBGamePadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGamePadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				284840361CC4F634008FE164 /* BBGameBackgroundView.swift */,
+				286814FD1CCE1840005C213D /* BBBoyView.swift */,
+				286814FF1CCE186C005C213D /* BBGamePadView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,8 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				28483FF21CC4EF36008FE164 /* AppDelegate.swift in Sources */,
+				286815001CCE186C005C213D /* BBGamePadView.swift in Sources */,
 				284840371CC4F634008FE164 /* BBGameBackgroundView.swift in Sources */,
 				284840351CC4F611008FE164 /* BBBaseView.swift in Sources */,
+				286814FE1CCE1840005C213D /* BBBoyView.swift in Sources */,
 				284840331CC4F28B008FE164 /* BBGameViewController.swift in Sources */,
 				284840311CC4F265008FE164 /* BBBaseViewController.swift in Sources */,
 			);
@@ -550,6 +558,7 @@
 				284840181CC4EF36008FE164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		284840191CC4EF36008FE164 /* Build configuration list for PBXNativeTarget "BombBoy_SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +567,7 @@
 				2848401B1CC4EF36008FE164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2848401C1CC4EF36008FE164 /* Build configuration list for PBXNativeTarget "BombBoy_SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +576,7 @@
 				2848401E1CC4EF36008FE164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

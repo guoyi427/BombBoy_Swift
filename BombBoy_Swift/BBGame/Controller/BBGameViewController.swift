@@ -10,11 +10,17 @@ import UIKit
 
 class BBGameViewController: BBBaseViewController {
 
+    var _gameBackgroundView: BBGameBackgroundView = BBGameBackgroundView(size: CGSize(width: 49, height: 29));
+    var _boyView: BBBoyView = BBBoyView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        _prepareBackgroundView();
+        _prepareBackgroundView()
+        _prepareBoyView()
+        _prepareGamePadView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +33,17 @@ class BBGameViewController: BBBaseViewController {
     func _prepareBackgroundView() {
         view.backgroundColor = UIColor.whiteColor()
 
-        let gameBackgroundView: BBGameBackgroundView = BBGameBackgroundView(size: CGSize(width: 10, height: 10))
-        view.addSubview(gameBackgroundView)
+        view.addSubview(_gameBackgroundView)
+    }
+    
+    func _prepareBoyView() {
+        _boyView.center = CGPointMake(CGRectGetWidth(_gameBackgroundView.frame) / 2.0, CGRectGetHeight(_gameBackgroundView.frame) / 2.0)
+        _gameBackgroundView.addSubview(_boyView)
+    }
+    
+    func _prepareGamePadView() {
+        let gamePad: BBGamePadView = BBGamePadView()
+        view.addSubview(gamePad)
     }
 
 }
