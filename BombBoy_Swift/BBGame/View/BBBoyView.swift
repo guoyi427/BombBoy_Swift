@@ -9,14 +9,9 @@
 import UIKit
 
 class BBBoyView: BBBaseView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
+    var _updateTimer: NSTimer? = nil
+    var _direction: BBGamePadDirection = BBGamePadDirection.BBGamePadDirectionCenter
     
     init() {
         super.init(frame: CGRect(
@@ -31,9 +26,34 @@ class BBBoyView: BBBaseView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    //MARK:公有方法
-    func moveWithDirection(d: Int) {
+    func updateTimerAction() {
+        var newFrame: CGRect = self.frame
         
+        switch _direction {
+        case .BBGamePadDirectionLeft:
+            newFrame.origin.x -= Size_Boy
+        case .BBGamePadDirectionRight:
+            newFrame.origin.x += Size_Boy
+        case .BBGamePadDirectionTop:
+            newFrame.origin.y -= Size_Boy
+        case .BBGamePadDirectionBottom:
+            newFrame.origin.y += Size_Boy
+        default:
+            _updateTimer?.invalidate()
+            _updateTimer = nil
+        }
+        self.frame = newFrame
+
+    }
+    
+    //MARK:公有方法
+    func moveWithDirection(direction: BBGamePadDirection) {
+        
+        if (_updateTimer == nil) {
+            _updateTimer = NSTimer.scheduledTimerWithTimeInterval(_speed, target: self, selector: #selector(BBBoyView.updateTimerAction), userInfo: nil, repeats: true)
+        }
+        
+        _direction = direction
     }
     
 }

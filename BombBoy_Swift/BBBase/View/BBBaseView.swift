@@ -15,6 +15,8 @@ class BBBaseView: UIView {
     internal let Width_Screen: CGFloat = UIScreen.mainScreen().bounds.size.width
     internal let Height_Screen: CGFloat = UIScreen.mainScreen().bounds.size.height
     
+    var _speed: NSTimeInterval = 0.5
+
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

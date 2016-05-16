@@ -11,13 +11,13 @@
 		28483FF91CC4EF36008FE164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28483FF81CC4EF36008FE164 /* Assets.xcassets */; };
 		284840071CC4EF36008FE164 /* BombBoy_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840061CC4EF36008FE164 /* BombBoy_SwiftTests.swift */; };
 		284840121CC4EF36008FE164 /* BombBoy_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840111CC4EF36008FE164 /* BombBoy_SwiftUITests.swift */; };
-		284840291CC4F0DF008FE164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284840271CC4F0DF008FE164 /* LaunchScreen.storyboard */; };
 		284840311CC4F265008FE164 /* BBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840301CC4F265008FE164 /* BBBaseViewController.swift */; };
 		284840331CC4F28B008FE164 /* BBGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840321CC4F28B008FE164 /* BBGameViewController.swift */; };
 		284840351CC4F611008FE164 /* BBBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840341CC4F611008FE164 /* BBBaseView.swift */; };
 		284840371CC4F634008FE164 /* BBGameBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840361CC4F634008FE164 /* BBGameBackgroundView.swift */; };
 		286814FE1CCE1840005C213D /* BBBoyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286814FD1CCE1840005C213D /* BBBoyView.swift */; };
 		286815001CCE186C005C213D /* BBGamePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286814FF1CCE186C005C213D /* BBGamePadView.swift */; };
+		28B524891CE9D3A100DC8C9E /* BBBombView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B524881CE9D3A100DC8C9E /* BBBombView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +48,13 @@
 		2848400D1CC4EF36008FE164 /* BombBoy_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BombBoy_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		284840111CC4EF36008FE164 /* BombBoy_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombBoy_SwiftUITests.swift; sourceTree = "<group>"; };
 		284840131CC4EF36008FE164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		284840281CC4F0DF008FE164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		284840301CC4F265008FE164 /* BBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBaseViewController.swift; sourceTree = "<group>"; };
 		284840321CC4F28B008FE164 /* BBGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGameViewController.swift; sourceTree = "<group>"; };
 		284840341CC4F611008FE164 /* BBBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBaseView.swift; sourceTree = "<group>"; };
 		284840361CC4F634008FE164 /* BBGameBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGameBackgroundView.swift; sourceTree = "<group>"; };
 		286814FD1CCE1840005C213D /* BBBoyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBoyView.swift; sourceTree = "<group>"; };
 		286814FF1CCE186C005C213D /* BBGamePadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGamePadView.swift; sourceTree = "<group>"; };
+		28B524881CE9D3A100DC8C9E /* BBBombView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBombView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,6 @@
 				28483FF11CC4EF36008FE164 /* AppDelegate.swift */,
 				28483FF81CC4EF36008FE164 /* Assets.xcassets */,
 				28483FFD1CC4EF36008FE164 /* Info.plist */,
-				284840271CC4F0DF008FE164 /* LaunchScreen.storyboard */,
 			);
 			path = BombBoy_Swift;
 			sourceTree = "<group>";
@@ -197,6 +196,7 @@
 				284840361CC4F634008FE164 /* BBGameBackgroundView.swift */,
 				286814FD1CCE1840005C213D /* BBBoyView.swift */,
 				286814FF1CCE186C005C213D /* BBGamePadView.swift */,
+				28B524881CE9D3A100DC8C9E /* BBBombView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,7 +305,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284840291CC4F0DF008FE164 /* LaunchScreen.storyboard in Resources */,
 				28483FF91CC4EF36008FE164 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +332,7 @@
 			files = (
 				28483FF21CC4EF36008FE164 /* AppDelegate.swift in Sources */,
 				286815001CCE186C005C213D /* BBGamePadView.swift in Sources */,
+				28B524891CE9D3A100DC8C9E /* BBBombView.swift in Sources */,
 				284840371CC4F634008FE164 /* BBGameBackgroundView.swift in Sources */,
 				284840351CC4F611008FE164 /* BBBaseView.swift in Sources */,
 				286814FE1CCE1840005C213D /* BBBoyView.swift in Sources */,
@@ -371,17 +371,6 @@
 			targetProxy = 2848400E1CC4EF36008FE164 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		284840271CC4F0DF008FE164 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				284840281CC4F0DF008FE164 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		284840141CC4EF36008FE164 /* Debug */ = {
@@ -473,11 +462,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BombBoy_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guoyi.BombBoy-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -485,11 +478,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BombBoy_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guoyi.BombBoy-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
