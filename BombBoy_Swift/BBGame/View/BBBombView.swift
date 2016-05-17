@@ -20,6 +20,9 @@ class BBBombView: BBBaseView {
     init(point: CGPoint, duration: NSTimeInterval) {
         super.init(frame: CGRect(origin: point, size: CGSizeMake(Size_Boy, Size_Boy)))
         backgroundColor = UIColor.blackColor()
+        layer.cornerRadius = Size_Boy / 2.0
+        layer.masksToBounds = true
+        
         _duration = duration
         performSelector(#selector(BBBombView.removeSelf), withObject: nil, afterDelay: _duration)
     }

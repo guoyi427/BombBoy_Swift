@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28013AEE1CEB2E8D0023A845 /* xh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28013AED1CEB2E8D0023A845 /* xh@2x.png */; };
 		28483FF21CC4EF36008FE164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28483FF11CC4EF36008FE164 /* AppDelegate.swift */; };
 		28483FF91CC4EF36008FE164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28483FF81CC4EF36008FE164 /* Assets.xcassets */; };
 		284840071CC4EF36008FE164 /* BombBoy_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840061CC4EF36008FE164 /* BombBoy_SwiftTests.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28013AED1CEB2E8D0023A845 /* xh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xh@2x.png"; sourceTree = "<group>"; };
 		28483FEE1CC4EF36008FE164 /* BombBoy_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombBoy_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28483FF11CC4EF36008FE164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28483FF81CC4EF36008FE164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				28483FF11CC4EF36008FE164 /* AppDelegate.swift */,
 				28483FF81CC4EF36008FE164 /* Assets.xcassets */,
 				28483FFD1CC4EF36008FE164 /* Info.plist */,
+				28013AED1CEB2E8D0023A845 /* xh@2x.png */,
 			);
 			path = BombBoy_Swift;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28013AEE1CEB2E8D0023A845 /* xh@2x.png in Resources */,
 				28483FF91CC4EF36008FE164 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
