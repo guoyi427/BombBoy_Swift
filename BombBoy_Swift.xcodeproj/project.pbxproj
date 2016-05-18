@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28013AEE1CEB2E8D0023A845 /* xh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28013AED1CEB2E8D0023A845 /* xh@2x.png */; };
+		2804C6041CEC507E00E25840 /* BBEmitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2804C6031CEC507E00E25840 /* BBEmitterManager.swift */; };
 		28483FF21CC4EF36008FE164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28483FF11CC4EF36008FE164 /* AppDelegate.swift */; };
 		28483FF91CC4EF36008FE164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28483FF81CC4EF36008FE164 /* Assets.xcassets */; };
 		284840071CC4EF36008FE164 /* BombBoy_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284840061CC4EF36008FE164 /* BombBoy_SwiftTests.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		28013AED1CEB2E8D0023A845 /* xh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xh@2x.png"; sourceTree = "<group>"; };
+		2804C6031CEC507E00E25840 /* BBEmitterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBEmitterManager.swift; sourceTree = "<group>"; };
 		28483FEE1CC4EF36008FE164 /* BombBoy_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombBoy_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28483FF11CC4EF36008FE164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28483FF81CC4EF36008FE164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				286814FD1CCE1840005C213D /* BBBoyView.swift */,
 				286814FF1CCE186C005C213D /* BBGamePadView.swift */,
 				28B524881CE9D3A100DC8C9E /* BBBombView.swift */,
+				2804C6031CEC507E00E25840 /* BBEmitterManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				28483FF21CC4EF36008FE164 /* AppDelegate.swift in Sources */,
 				286815001CCE186C005C213D /* BBGamePadView.swift in Sources */,
 				28B524891CE9D3A100DC8C9E /* BBBombView.swift in Sources */,
+				2804C6041CEC507E00E25840 /* BBEmitterManager.swift in Sources */,
 				284840371CC4F634008FE164 /* BBGameBackgroundView.swift in Sources */,
 				284840351CC4F611008FE164 /* BBBaseView.swift in Sources */,
 				286814FE1CCE1840005C213D /* BBBoyView.swift in Sources */,
