@@ -10,16 +10,24 @@ import UIKit
 
 class BBGameViewController: BBBaseViewController {
 
-    var _gameBackgroundView: BBGameBackgroundView = BBGameBackgroundView(size: CGSize(width: 49, height: 29));
-    var _boyView: BBBoyView = BBBoyView()
+    //  Data
     
+    var _gameMapDatasources: [String: AnyObject]?
+    
+    
+    //  UI
+    
+    var _gameBackgroundView: BBGameBackgroundView?
+    var _boyView: BBBoyView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        _prepareMapDatasources()
+        
         _prepareBackgroundView()
         _prepareBoyView()
+        _prepareWallView()
         _prepareGamePadView()
         _prepareAddBombGestureRecognizer()
     }
@@ -31,15 +39,43 @@ class BBGameViewController: BBBaseViewController {
     
     //MARK: Prepare
     
+    func _prepareMapDatasources() {
+        _gameMapDatasources = ["id": 1,
+                               "width": 9,
+                               "height": 5]
+        var walls = [AnyObject]()
+
+        for i in 0 ... 3 {
+            let wall: [String: Int] = ["x": i,
+                                       "y": 0,
+                                       "health": 1]
+            walls.append(wall)
+        }
+        _gameMapDatasources?.updateValue(walls, forKey: "walls")
+    }
+    
     func _prepareBackgroundView() {
         view.backgroundColor = UIColor.whiteColor()
 
-        view.addSubview(_gameBackgroundView)
+        _gameBackgroundView = BBGameBackgroundView(size: CGSize(width: _gameMapDatasources!["width"] as! CGFloat,
+            height: _gameMapDatasources!["height"] as! CGFloat))
+
+        view.addSubview(_gameBackgroundView!)
     }
     
     func _prepareBoyView() {
-        _boyView.center = CGPointMake(CGRectGetWidth(_gameBackgroundView.frame) / 2.0, CGRectGetHeight(_gameBackgroundView.frame) / 2.0)
-        _gameBackgroundView.addSubview(_boyView)
+        _boyView = BBBoyView()
+        _boyView!.center = CGPointMake(CGRectGetWidth(_gameBackgroundView!.frame) / 2.0, CGRectGetHeight(_gameBackgroundView!.frame) / 2.0)
+        _gameBackgroundView!.addSubview(_boyView!)
+    }
+    
+    func _prepareWallView() {
+        let walls: [[String: Int]] = _gameMapDatasources!["walls"] as! Array
+        for wall: Dictionary in walls {
+            print("wall" + wall.description)
+            let wall: BBWallView = BBWallView(x: wall["x"]!, y: wall["y"]!, health: wall["health"]!)
+            _gameBackgroundView!.addSubview(wall)
+        }
     }
     
     func _prepareGamePadView() {
@@ -58,24 +94,24 @@ class BBGameViewController: BBBaseViewController {
     
     //MARK: Gesture Recognizer - Action
     func addBombGestureRecognizerAction() {
-        let bombView: BBBombView = BBBombView(point: _boyView.frame.origin, duration: 5.0)
+        let bombView: BBBombView = BBBombView(point: _boyView!.frame.origin, duration: 5.0)
         bombView.delegate = self
-        _gameBackgroundView.addSubview(bombView)
-        _gameBackgroundView.bringSubviewToFront(_boyView)
+        _gameBackgroundView!.addSubview(bombView)
+        _gameBackgroundView!.bringSubviewToFront(_boyView!)
     }
 
 }
 
 extension BBGameViewController: BBGamePadViewDelegate {
     func gamePadViewDidMove(sender: BBGamePadView, direction: BBGamePadDirection) {
-        _boyView.moveWithDirection(direction)
-        _gameBackgroundView.moveWithDirection(direction)
+        _boyView!.moveWithDirection(direction)
+        _gameBackgroundView!.moveWithDirection(direction)
     }
 }
 
 extension BBGameViewController: BBBombViewDelegate {
     func bombViewDidFinish(position: CGPoint) {
         print("bomb finish" + String(position))
-        BBEmitterManager.addEmitter(_gameBackgroundView, position: position, power: 0)
+        BBEmitterManager.addEmitter(_gameBackgroundView!, position: position, power: 0)
     }
 }

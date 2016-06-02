@@ -87,7 +87,6 @@ class BBEmitterManager: NSObject {
     }
     
     class func removeEmitterLayer(emitter: CAEmitterLayer) {
-        emitter.removeAllAnimations()
         emitter.removeFromSuperlayer()
     }
 }
